@@ -43,12 +43,21 @@ public class Main {
 		T.setPSemi1();
 		T.setPSemi2();
 		T.getPSemi1().getMarcador();
+		T.getPSemi1().Ganador();
+		System.out.println(T.getPSemi1().getGanador().toString()+"Gano el partido 1");
 		T.getPSemi2().getMarcador();
+		T.getPSemi2().Ganador();
+		System.out.println(T.getPSemi2().getGanador().toString()+"Gano el partido 2");
 		T.setSubFinal(T.getPSemi1().getPerdedor(), T.getPSemi2().getPerdedor());
 		T.setFinal(T.getPSemi1().getGanador(),T.getPSemi2().getGanador());
 		T.getSubFinal().getMarcador();
+		T.getSubFinal().Ganador();
+		System.out.println(T.getSubFinal().getPerdedor().toString()+"Quedo Cuarto");
+		System.out.println(T.getSubFinal().getGanador().toString()+"Quedo tercero");
 		T.getFinal().getMarcador();
-		System.out.println("Gano el Torneo!");
+		T.getFinal().Ganador();
+		System.out.println(T.getFinal().getPerdedor().toString()+"Quedo segundo");
+		System.out.println(T.getFinal().getGanador().toString()+"Gano el Torneo!");
 		
 	}
 }

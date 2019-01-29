@@ -13,14 +13,14 @@ public class Partida {
 	public void getMarcador() {
 		int n=(int) Math.random() * 5;
 		marcador.put(participante1, n);
-		int m=(int) Math.random() * 5;;
-		while (n==m) {
-			 m=(int) Math.random() * 5;
+		int m=(int) Math.random() * 5;
+		while (n!=m) {		
+			m=(int) Math.random() * 5;
 		}
 		marcador.put(participante2, m);
 	}
 	
-	public Equipo Ganador() {
+	public void Ganador() {
 		if (marcador.get(participante1)>marcador.get(participante2)) {
 			ganador = participante1;
 			perdedor = participante2;
@@ -28,7 +28,6 @@ public class Partida {
 			ganador = participante2;
 			perdedor = participante1;
 		}
-		return ganador;
 	}
 
 	public Equipo getGanador() {
